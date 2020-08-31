@@ -21,6 +21,8 @@ const styles = StyleSheet.create({
     label: {
         color: '#FFFFFF',
         fontSize: 22,
+        fontFamily: "Roboto",
+        lineHeight: 28,
     },
 });
 type TProps = {
