@@ -1,1 +1,1 @@
-export {Success} from './success'
+export { Success } from './success';

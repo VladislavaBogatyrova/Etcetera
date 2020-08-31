@@ -1,6 +1,6 @@
-import React from 'react'
-import { Text } from 'react-native'
+import React from 'react';
+import { Text } from 'react-native';
 
 export const PersonalInfo = () => {
-    return <Text>PersonalInfo</Text>
-}
+  return <Text>PersonalInfo</Text>;
+};

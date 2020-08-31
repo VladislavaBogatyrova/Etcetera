@@ -1,1 +1,1 @@
-export { YourHobbies } from './your-hobbies'
+export { YourHobbies } from './your-hobbies';

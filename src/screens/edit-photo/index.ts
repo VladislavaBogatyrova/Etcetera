@@ -1,1 +1,1 @@
-export {EditPhoto} from './edit.photo'
+export { EditPhoto } from './edit.photo';
