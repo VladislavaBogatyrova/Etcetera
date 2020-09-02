@@ -2,8 +2,8 @@ import React from 'react'
 import { TextInput, StyleSheet } from 'react-native';
 
 
-export const Input = () => {
-    return <TextInput style={styles.container} />
+export const Input = ({placeholder}) => {
+    return <TextInput placeholder={placeholder} style={styles.container} />
 }
 
 
@@ -12,6 +12,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#000000',
         height: 37,
-        width: '100%'
+        width: '100%',
+        borderRadius: 3,
+        
     }
 })

@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        fontFamily: "Poppins",
+        // fontFamily: "Poppins",
         fontWeight: "600",
         fontSize: 46.3,
         lineHeight: 53,
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     infoIconI: {
-        fontFamily: "Roboto",
+        // fontFamily: "Roboto",
         fontWeight: "500",
         fontSize: 19.5,
         lineHeight: 28,

@@ -12,6 +12,9 @@ const Images: IHashMap<ImageSourcePropType> = {
   LOGO_BACK_OFFICE: require('./logo_back_office.png'),
   LOGO_ETCETERA: require('./logo.png'),
   BG_TRIANGLES: require('./BG_Triangles.png'),
+  BG_DOUBLE_TRIANGLES: require('./BG_DOUBLE_TRIANGLES.png'),
+  LOGO_SMALL: require('./LOGO_SMALL.png'),
+  BG_ETCETERA: require('./BG_ETCETERA.png'),
 };
 interface IHashMap<T> {
   [key: string]: T;
