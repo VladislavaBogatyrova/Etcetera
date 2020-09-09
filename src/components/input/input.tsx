@@ -1,11 +1,11 @@
 import React from 'react'
-import { TextInput, StyleSheet } from 'react-native';
+import { TextInput, StyleSheet, StyleProp, ViewStyle, } from 'react-native';
 
 
-export const Input = ({ placeholder, onChange, value, textInputProps }: TProps) => {
-    return <TextInput placeholder={placeholder} style={[styles.container]} onChangeText={onChange} value={value} {...textInputProps} />
+export const Input = ({ placeholder, onChange, value, textInputProps, style, numberOfLines = 1 }: TProps) => {
+    return <TextInput placeholder={placeholder} style={[styles.container,style]} onChangeText={onChange} numberOfLines={numberOfLines} multiline value={value} {...textInputProps} />
+
 }
-
 
 const styles = StyleSheet.create({
     container: {
@@ -22,4 +22,6 @@ type TProps = {
     onChange: (test: string) => void
     value: string
     textInputProps?: any
+    numberOfLines?: number,
+    style?: StyleProp<ViewStyle>
 }

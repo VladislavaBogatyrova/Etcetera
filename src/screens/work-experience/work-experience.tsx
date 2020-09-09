@@ -27,9 +27,15 @@ export const WorkExperience = () => {
 
         </View>
         <View style={styles.datesContainer}>
-          <Input style={styles.datesField} placeholder="mm.yyyy" />
-          <Input style={styles.datesField} placeholder="mm.yyyy" />
-        </View>
+                <View style={styles.datesFieldLeft}>
+                <Text style={styles.fieldTitle}>Start</Text>
+                  <Input placeholder="mm.yyyy"/>
+                </View>
+                <View style={styles.datesFieldRight}>
+                <Text style={styles.fieldTitle}>End</Text>
+                  <Input placeholder="mm.yyyy"/>
+                </View>
+              </View>
         <Text style={styles.fieldTitle}>Position Description</Text>
         <Input placeholder="Tell about your recponsibilities" />
       </View>
@@ -86,11 +92,17 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   datesContainer: {
-    // flex: 1,
     flexDirection: "row",
   },
-  datesField: {
-    height: 160,
+  datesFieldLeft: {
+    flex: 1,
+    marginRight: 5,
+  },
+  datesFieldRight: {
+    flex: 1,
+  },
+  description: {
+    height: 115,
   }
   // button: {
   //   marginTop: 20,

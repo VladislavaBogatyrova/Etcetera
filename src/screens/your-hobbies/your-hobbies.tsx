@@ -1,9 +1,10 @@
 import React from 'react';
-import { Text, Image, ImageBackground, StyleSheet, View,} from 'react-native';
+import { Text, Image, ImageBackground, StyleSheet, View, CheckBox,} from 'react-native';
 import images from '../../assets/images';
-import { Button, Input } from '../../components';
+import { Button, Input, Checkbox } from '../../components';
 import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+
 
 export const YourHobbies = () => {
   const { navigate } = useNavigation();
@@ -19,11 +20,12 @@ export const YourHobbies = () => {
             <View style={styles.form}>
               <Text style={styles.formTitle}>Your Hobbies</Text>
               <Text style={styles.fieldTitle}>How you spend your free time?</Text>
-              <Input placeholder="hobbies, sport, etc..." height={173}/>
+              <Input placeholder="hobbies, sport, etc..." style={styles.field}/>
               <Text style={styles.formTitle}>Additional Information</Text>
               <Text style={styles.fieldTitle}>Have any questions for us?</Text>
-              <Input placeholder="Be in touch :)"/>
+              <Input placeholder="Be in touch :)" style={styles.field}/>
             </View>
+          <Checkbox/>
           <Button onPress={navigateToSuccess}>Next</Button>
         </View>
   );
@@ -93,6 +95,13 @@ const styles = StyleSheet.create({
     color: "#000000",
     marginLeft: 15,
     marginTop: 20,
+  },
+  field :{
+    height: 173,
+  },
+  checkBox: {
+    borderRadius: 0,
+    color: "#00662B",
   },
   // button: {
   //   marginTop: 20,
