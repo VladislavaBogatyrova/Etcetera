@@ -13,15 +13,7 @@
 		"target": "ES2020",
 		"baseUrl": "./",
 		"paths": {
-			"@global": ["src/global/index"],
-			"@screens": ["src/screens/index"],
-			"@components": ["src/components/index"],
-			"@services": ["src/services/index"],
-			"@constants": ["src/constants/index"],
-			"@images": ["src/assets/images/index"],
-			"@helpers": ["src/helpers/index"],
-			"@typings": ["src/typings/index"],
-			"@hooks": ["src/hooks/index"]
+			
 		},
 		"plugins": [{ 
 				"name": "typescript-plugin-css-modules", 

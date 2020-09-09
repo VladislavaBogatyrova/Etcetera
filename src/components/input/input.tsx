@@ -2,8 +2,8 @@ import React from 'react'
 import { TextInput, StyleSheet } from 'react-native';
 
 
-export const Input = ({ placeholder }: { placeholder: string }) => {
-    return <TextInput placeholder={placeholder} style={styles.container} />
+export const Input = ({ placeholder, onChange, value, textInputProps }: TProps) => {
+    return <TextInput placeholder={placeholder} style={[styles.container]} onChangeText={onChange} value={value} {...textInputProps} />
 }
 
 
@@ -17,3 +17,9 @@ const styles = StyleSheet.create({
         paddingLeft: 15
     }
 })
+type TProps = {
+    placeholder: string
+    onChange: (test: string) => void
+    value: string
+    textInputProps?: any
+}

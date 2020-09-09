@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text, Image, ImageBackground, StyleSheet, View,} from 'react-native';
+import { Text, Image, ImageBackground, StyleSheet, View, } from 'react-native';
 import images from '../../assets/images';
-import { Button, Input } from '../../components';
+import { Button, Input, Header } from '../../components';
 import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -10,33 +10,31 @@ export const WorkExperience = () => {
   const navigateToYourHobbies = () => navigate('YourHobbies');
 
   return (
-        <View style={styles.container}>
-          <Image source={images.BG_DOUBLE_TRIANGLES} style={styles.topBackgroundImage}/>
-          <Image source={images.LOGO_SMALL} style={styles.logo}/>
-          <Image source={images.BG_ETCETERA} style={styles.bottomBackgroundImage}/>
-            <Text style={styles.title}>Fill THE FORM</Text>
-            <Text style={styles.subtitle}>area with * must be filled</Text>
-            <View style={styles.form}>
-              <Text style={styles.formTitle}>Work Experience</Text>
-              <Text style={styles.fieldTitle}>Place of Work</Text>
-              <Input placeholder="Name"/>
-              <Text style={styles.fieldTitle}>Position Held</Text>
-              <Input placeholder="Java Developer"/>
-              <View style={styles.datesContainer}>
-                <Text style={styles.fieldTitle}>Start</Text>
-                
-                <Text style={styles.fieldTitle}>End</Text>
-  
-              </View>
-              <View style={styles.datesContainer}>
-                <Input style={styles.datesField} placeholder="mm.yyyy"/> 
-                <Input style={styles.datesField} placeholder="mm.yyyy"/>
-              </View>
-              <Text style={styles.fieldTitle}>Position Description</Text>
-              <Input placeholder="Tell about your recponsibilities"/>
-            </View>
-          <Button onPress={navigateToYourHobbies}>Next</Button>
+    <View style={styles.container}>
+      <Header />
+      <Text style={styles.title}>Fill THE FORM</Text>
+      <Text style={styles.subtitle}>area with * must be filled</Text>
+      <View style={styles.form}>
+        <Text style={styles.formTitle}>Work Experience</Text>
+        <Text style={styles.fieldTitle}>Place of Work</Text>
+        <Input placeholder="Name" />
+        <Text style={styles.fieldTitle}>Position Held</Text>
+        <Input placeholder="Java Developer" />
+        <View style={styles.datesContainer}>
+          <Text style={styles.fieldTitle}>Start</Text>
+
+          <Text style={styles.fieldTitle}>End</Text>
+
         </View>
+        <View style={styles.datesContainer}>
+          <Input style={styles.datesField} placeholder="mm.yyyy" />
+          <Input style={styles.datesField} placeholder="mm.yyyy" />
+        </View>
+        <Text style={styles.fieldTitle}>Position Description</Text>
+        <Input placeholder="Tell about your recponsibilities" />
+      </View>
+      <Button onPress={navigateToYourHobbies}>Next</Button>
+    </View>
   );
 };
 
@@ -47,23 +45,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "space-between",
   },
-  topBackgroundImage: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0, 
-    bottom: 0,
-    resizeMode: 'contain',
-  },
-  bottomBackgroundImage: {
-    position: "absolute",
-    right: -16, 
-    bottom: 0,
-    resizeMode: 'contain',
-  },
-  logo: {
-    marginTop: 19,
-  },
+
   title: {
     fontFamily: "Bebas Neue",
     fontSize: 36,
