@@ -15,6 +15,7 @@ const Images: IHashMap<ImageSourcePropType> = {
   BG_DOUBLE_TRIANGLES: require('./BG_DOUBLE_TRIANGLES.png'),
   LOGO_SMALL: require('./LOGO_SMALL.png'),
   BG_ETCETERA: require('./BG_ETCETERA.png'),
+  CAMERA: require('./camera.png')
 };
 interface IHashMap<T> {
   [key: string]: T;

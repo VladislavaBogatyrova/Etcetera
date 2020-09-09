@@ -1,11 +1,15 @@
-import React from 'react';
-import { TouchableHighlight, StyleSheet, Text } from 'react-native';
+import React, { useMemo } from 'react';
+import { TouchableOpacity, StyleSheet, Text, StyleProp, ViewStyle } from 'react-native';
 
-export const Button = ({ children: label, onPress }: TProps) => {
+export const Button = ({ children: label, onPress, white, style }: TProps) => {
+    const containerStyle = useMemo(() => [styles.container, white && styles.white, style], [])
+    
+    const labelStyle = useMemo(() => [styles.label, white && styles.labelWhite], [])
+
     return (
-        <TouchableHighlight onPress={onPress} style={styles.container}>
-            <Text style={styles.label}>{label}</Text>
-        </TouchableHighlight>
+        <TouchableOpacity onPress={onPress} style={containerStyle}>
+            <Text style={labelStyle}>{label}</Text>
+        </TouchableOpacity>
     );
 };
 
@@ -18,14 +22,26 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+    white:
+    {
+        backgroundColor: '#ffffff',
+        borderWidth: 1,
+        borderColor: '#00662B',
+        borderRadius: 10
+    },
     label: {
         color: '#FFFFFF',
         fontSize: 22,
         fontFamily: "Roboto",
         lineHeight: 28,
     },
+    labelWhite:{
+        color: '#00662B'
+    }
 });
 type TProps = {
     children: string;
     onPress: () => void
+    white?: boolean
+    style?: StyleProp<ViewStyle>
 };
